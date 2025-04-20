@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- start of head  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIS Portal</title>                 
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>   
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- end of head -->
+ <!-- ------------------------------------------------------------------------------------------------- -->
+ <!-- start of body -->
+ <body>
+  <!-- header section start -->
+  <header class="main-header">
+      <div class="logo">
+        <!-- iiui logo -->
+        <div class="logo-content">
+          <img src="iiui_logo-removebg-preview.png" alt="logo" />
+          <span>SIS Portal</span>
+          <!-- search bar -->
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" class="search-bar" placeholder="Search..." />
+          </div>
+      </div>
+        </div>
+      </div>
+      <!-- right side of navbar -->
+      <div class="user-info"><i class="fa-regular fa-bell"></i>Haseen</div>
+    </header>
+    <!-- end of header section -->
+                                     <!-- ----------------- -->
+      
+    <!-- left sidebar -->
+  <div class="container">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><i class="fa-solid fa-gauge-simple-high"></i>Dashboard</li>
+          <li><i class="fa-regular fa-clipboard"></i>Assignments</li>
+          <li><i class="fa-regular fa-calendar-check"></i>Schedule</li>
+          <li><i class="fa-brands fa-rocketchat"></i>Chats</li>
+          <li><i class="fa-regular fa-calendar-xmark"></i>Resources</li>
+          <li><i class="fa-regular fa-note-sticky"></i>Notes</li>
+          <li><i class="fa-brands fa-discourse"></i>Courses</li>
+          <li><i class="fa-solid fa-gear"></i>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- end of sidebar -->
+                              <!-- --------------------------------------- -->
+    
+    <!-- start of main -->
+    <!-- greeting section start -->
+    <main class="main-content">
+      <section class="greeting">
+        <h2>Hello Mansoor! 🙌</h2>
+        <p>Let's learn something new today!</p>
+      </section>
+      <!-- end of greeting section -->
+                              <!-- ---------------------------------------- -->
+       
+                              <!-- section 2 start -->
+      <!-- start of card 1 -->
+      <section class="dashboard-grid">
+        <div class="card card1">
+          <h3>Recent Enrolled Course</h3>
+          <!-- div in div -->
+        <div class="speed">
+          <i class="fa-solid fa-gauge-simple-high needle-icon"></i>
+          <p>Artificial Intelligence & Machine</p>
+          <svg width="120" height="20" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
+            <defs class="loading">
+              <!-- Define the gradient transition -->
+              <linearGradient id="smoothGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#001f3f; stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#001f3f; stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#d3d3d3; stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#d3d3d3; stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <!-- Full bar with gradient -->
+            <rect x="0" y="0" width="120" height="16" fill="url(#smoothGradient)" rx="10" ry="10"/>
+          </svg>
+        </div>
+        </div>
+        <!-- end of card 1 -->
+                              <!-- ------------------------------------- -->
+
+        <!-- start of card 2 -->
+        <div class="card resources-card">
+          <h3>Your Resources</h3>
+        
+          <div class="resource-item">
+            <div class="icon pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">A-star Report.pdf</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%;"></div>
+              </div>
+            </div>
+            <div class="action">Cancel</div>
+          </div>
+        
+          <div class="resource-item">
+            <div class="icon jpg">JPG</div>
+            <div class="file-info">
+              <div class="file-name">Design_Theory.jpg</div>
+              <div class="file-desc">Brief look at color contrast models</div>
+            </div>
+            <div class="action">Download</div>
+          </div>
+        
+          <div class="resource-item">
+            <div class="icon zip">ZIP</div>
+            <div class="file-info">
+              <div class="file-name">demo_UI.zip</div>
+              <div class="file-desc">All UI screens & guides</div>
+            </div>
+            <div class="action">Download</div>
+          </div>
+        
+          <div class="see-more">see more</div>
+        </div>
+        
+        <!-- end of card 2 -->
+                               <!---------------------------------------  -->
+        
+        <!-- satrt of card 3 -->
+        <div class="card card3">
+          <h3>Calendar</h3>
+          <input type="date" />
+        </div>
+        <!-- end of card 3 -->
+                             <!-- -------------------------------------- -->
+
+        <!-- start of card 4 -->
+        <div class="card card4">
+          <h3>Hours Spent</h3>
+  <canvas id="hoursChart"></canvas>
+        </div>
+        <!-- end of card 4 -->
+                             <!-- ---------------------------------------- -->
+
+        <!-- start of card 5 -->
+        <div class="card performance-card card5">
+          <div class="card-header">
+            <h3>Performance</h3>
+          </div>
+          <div class="legend">
+            <span class="dot"></span>
+            Assignment Submission Performance
+            <!-- drpdown menu -->
+            <select>
+              <option>1st Sem</option>
+              <option>2nd Sem</option>
+            </select>
+          </div>
+            <!-- performance indicator -->
+          <div class="gauge">
+            <div class="needle"></div>
+            <svg viewBox="0 0 100 50">
+              <path d="M10 50 A40 40 0 0 1 90 50" stroke="#cbd5e1" stroke-width="8" fill="none"/>
+              <path d="M10 50 A40 40 0 0 1 70 20" stroke="#2563eb" stroke-width="8" fill="none"/>
+            </svg>
+          </div>
+            <!-- gpa calculation -->
+          <div class="gpa">
+            Your GPA: <strong>3.91</strong>
+          </div>
+        </div>
+        <!-- end of card 5 -->
+                                <!-- ---------------------------------- -->
+        
+        <!-- start of card 6 -->
+        <div class="card card6">
+          <h3>To do List</h3>
+          <!-- making to-do list -->
+          <ul class="todo-list">
+            <li>
+                <div class="task-row">
+                  <input type="checkbox" id="task1" />
+              <label for="task1">
+                  <span class="task-title">DBMS Assignment #1</span>
+                </div>
+                <div class="task-date">
+                  <small>Tuesday, 26 February 2025</small>
+                </div>
+              </label>
+            </li>
+            <li>
+                <div class="task-row">
+                  <input type="checkbox" id="task2" />
+              <label for="task2">
+                  <span class="task-title">AI & ML Lab Task #3</span>
+                </div>
+                <div class="task-date">
+                  <small>Monday, 24 March 2025</small>
+                </div>
+              </label>
+            </li>
+            <li>
+                <div class="task-row">
+                  <input type="checkbox" id="task3" checked />
+              <label for="task3" class="checked">
+                  <span class="task-title">Group Meeting</span>
+                </div>
+                <div class="task-date">
+                  <small>Friday, 10 April 2025</small>
+                </div>
+              </label>
+            </li>
+            <li>
+                <div class="task-row">
+                  <input type="checkbox" id="task4" checked />
+              <label for="task4" class="checked">
+                  <span class="task-title">Visual Representation</span>
+                </div>
+                <div class="task-date">
+                  <small>Friday, 05 May 2025</small>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <!-- end of card 6 -->
+                              <!-------------------------------------------  -->
+        
+        <!-- start of card 7 -->
+        <div class="card full-width">
+          <h3>Courses</h3>
+          <div class="course-list">
+            <div class="course">
+              <i class="fas fa-robot course-icon"></i>
+              <div class="course-text">
+                Artificial Intelligence & Machine Learning<br>
+                <small>03 Lessons</small>
+              </div>
+            </div>
+            <div class="course">
+              <i class="fas fa-laptop-code course-icon"></i>
+              <div class="course-text">
+                Software Engineering<br>
+                <small>03 Lessons</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of card 7 -->
+                              <!--  ------------------------------------ -- -->
+        
+        <!-- start of card 8 -->
+        <div class="card full-width">
+          <h3>Pending Assignments</h3>
+          <div class="course-list">
+            <div class="course assignment">
+              <i class="fa-solid fa-graduation-cap course-icon"></i>
+              <div class="course-text">
+                DBMS Assignment #1<br>
+                <small>Sunday, 12:55pm</small>
+              </div>
+              <button class="start-btn">Start</button>
+            </div>
+            <div class="course assignment">
+              <i class="fa-regular fa-clock course-icon"></i>
+              <div class="course-text">
+                DBMS Lab Task #3<br>
+                <small>Sunday, 12:55pm</small>
+              </div>
+              <button class="start-btn">Start</button>
+            </div>
+          </div>
+        </div>
+        <!-- end of card 8 -->
+                              <!-- ---------------------------------------- -->
+        
+      </section>
+      <!-- end of section 2 -->
+    </main>
+    <!-- end of main -->
+</body>
+</html>
